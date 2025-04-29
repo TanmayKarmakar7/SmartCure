@@ -6,7 +6,7 @@ import contact_image from './contact_image.jpg'
 import about_image from './about_image.jpg'
 import logo from './logo.png'
 import dropdown_icon from './dropdown_icon.svg'
-import menu_icon from './menu_icon.svg'
+import menu_icon from './menu_icon.png'
 import cross_icon from './cross_icon.png'
 import chats_icon from './chats_icon.svg'
 import verified_icon from './verified_icon.png'
@@ -37,6 +37,7 @@ import General_physician from './General_physician.svg'
 import Gynecologist from './Gynecologist.svg'
 import Neurologist from './Neurologist.svg'
 import Pediatricians from './Pediatricians.svg'
+import specialization_icon from './specialization_icon.png'
 
 
 export const assets = {
@@ -57,6 +58,7 @@ export const assets = {
     upload_icon,
     stripe_logo,
     razorpay_logo,
+    specialization_icon
 }
 
 export const specialityData = [

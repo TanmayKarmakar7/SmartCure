@@ -60,25 +60,25 @@ const Login = () => {
             value={password}
           />
         </div>
-        <button className="bg-[#58C87E] text-white w-full py-2 rounded-md text-base mt-2">
+        <button className="bg-[#58C87E] text-white w-full py-2 rounded-md text-base mt-2 cursor-pointer">
           {state === "Sign up" ? "Create Account" : "Log In"}
         </button>
         {state === "Sign up" ? (
-          <p>
+          <p className="mt-1">
             Already have an account?
             <span
               onClick={() => setState("Login")}
-              className="text-blue-500 cursor-pointer underline"
+              className="text-[#58C87E] cursor-pointer underline"
             >
               Login here
             </span>
           </p>
         ) : (
-          <p>
+          <p className="mt-1">
             Create a new Account?
             <span
               onClick={() => setState("Sign up")}
-              className="text-blue-500 cursor-pointer underline"
+              className="text-[#58C87E] cursor-pointer underline"
             >
               Click here
             </span>

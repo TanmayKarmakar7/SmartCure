@@ -1,10 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { AppContext } from '../context/AppContext'
+import { assets } from '../assets/assets'
 
 const Doctors = () => {
 
   const {speciality} = useParams()
+
+  const [showFilter, setShowFilter] = useState(false)
 
   const navigate = useNavigate()
 
@@ -29,7 +32,11 @@ const Doctors = () => {
     <div>
       <p className='text-gray-600'>Browse through the doctors specialist.</p>
       <div className='flex flex-col sm:flex-row items-start gap-5 mt-5'>
-        <div className='flex flex-col gap-4 text-sm text-gray-600'>
+        <button onClick={() => setShowFilter(prev => !prev)} className={`py-2 px-4 border border-gray-300 rounded text-sm transition-all sm:hidden flex items-center gap-1 ${showFilter ? 'bg-[#58C87E] text-white' : ''}`}>
+          Filter By Specialization 
+          <img src={assets.specialization_icon} alt="specialization_icon" className={`w-5 ${showFilter ? 'invert brightness-200' : ''}`} />
+        </button>
+        <div className={`flex-col gap-4 text-sm text-gray-600 ${showFilter ? 'flex' : 'hidden'} sm:flex`}>
           <p onClick={() => speciality === 'General physician' ? navigate('/doctors') : navigate('/doctors/General physician')} className={`w-[94vw] sm:w-auto pl-3 pr-16 py-1.5 border border-gray-300 rounded transition-all cursor-pointer ${speciality === 'General physician' ? 'bg-green-200 text-black' : ''}`}>General physician</p>
 
           <p onClick={() => speciality === 'Gynecologist' ? navigate('/doctors') : navigate('/doctors/Gynecologist')} className={`w-[94vw] sm:w-auto pl-3 pr-16 py-1.5 border border-gray-300 rounded transition-all cursor-pointer ${speciality === 'Gynecologist' ? 'bg-green-200 text-black' : ''}`}>Gynecologist</p>
