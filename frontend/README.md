@@ -1,23 +1,26 @@
-🩺 SmartCure – Doctor's Appointment Booking Website
+# 🩺 SmartCure – Doctor's Appointment Booking Website
+
 SmartCure is a user-friendly web platform designed to simplify the process of booking medical appointments. Whether you're a patient looking for a quick way to schedule visits or a doctor managing your appointments, SmartCure streamlines the experience for everyone involved.
 
 🚀 Features
-✅ Patient registration and login
 
-✅ Doctor registration and profile management
+  - Patient registration and login
 
-✅ Appointment booking and scheduling
+  - Doctor registration and profile management
 
-✅ Real-time availability of doctors
+  - Appointment booking and scheduling
 
-✅ Admin dashboard for managing users and appointments
+  - Real-time availability of doctors
+
+  - Admin dashboard for managing users and appointments
 
 
 🛠️ Tech Stack
-✅ Frontend: React Js, Tailwind CSS
 
-✅ Backend: Node.js, Express
+  - Frontend: React Js, Tailwind CSS
 
-✅ Database: MongoDB
+  - Backend: Node.js, Express
 
-✅ Extras: JWT (for login)
+  - Database: MongoDB
+
+  - Extras: JWT (for login)
