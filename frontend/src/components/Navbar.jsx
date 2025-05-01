@@ -44,7 +44,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div> 
-            : <button onClick={() => navigate('/login')} className='bg-[#58C87E] text-white px-8 py-3 rounded-full hidden md:block'>Create account</button>
+            : <button onClick={() => navigate('/login')} className='bg-[#58C87E] text-white px-8 py-3 rounded-full hidden md:block cursor-pointer'>Create account</button>
         }
 
         <img onClick={() => setShowMenu(true)} src={assets.menu_icon} alt="menu-icon" className='w-9 md:hidden' />
