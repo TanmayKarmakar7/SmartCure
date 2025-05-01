@@ -30,12 +30,12 @@ const Navbar = () => {
             <hr className='border-none outline-none h-0.5 bg-[#58C87E] w-3/5 m-auto hidden' />
         </NavLink>
       </ul>
-      <div className='flex items-center gap-4'>
+      <div className='flex items-center'>
         {
             token 
             ? <div className='flex items-center gap-2 cursor-pointer group relative'>
                 <img src={assets.profile_pic} alt="profile-picture" className='w-10' />
-                <img src={assets.dropdown_icon} alt="dropdown-icon" className='w-2.5' />
+                {/* <img src={assets.dropdown_icon} alt="dropdown-icon" className='w-2.5' /> */}
                 <div className='absolute top-0 right-0 pt-[55px] text-base font-medium text-gray-600 z-20 hidden group-hover:block'>
                     <div className='min-w-48 bg-stone-100 rounded flex flex-col gap-4 p-4'>
                         <p onClick={() => navigate('/my-profile')} className='hover:text-black cursor-pointer'>My Profile</p>
@@ -47,7 +47,7 @@ const Navbar = () => {
             : <button onClick={() => navigate('/login')} className='bg-[#58C87E] text-white px-8 py-3 rounded-full hidden md:block cursor-pointer'>Create account</button>
         }
 
-        <img onClick={() => setShowMenu(true)} src={assets.menu_icon} alt="menu-icon" className='w-9 md:hidden' />
+        <img onClick={() => setShowMenu(true)} src={assets.menu_icon} alt="menu-icon" className='w-9 md:hidden ml-5' />
 
         {/* mobile menu  */}
         <div className={`${showMenu ? 'fixed w-full' : 'h-0 w-0'} md:hidden right-0 top-0 bottom-0 z-20 overflow-hidden bg-white transition-all`}>
