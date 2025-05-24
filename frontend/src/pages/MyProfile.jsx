@@ -1,27 +1,13 @@
-import React, { useState } from "react";
-// import profile from "../assets/profile_pic.png";
-import Umesh from "../assets/Umesh.jpg";
-// const bs4 = new URL("../assets/profile_pic.png",import.meta.url);
+import React, { useContext, useState } from "react";
+import { AppContext } from "../context/AppContext";
 
 const MyProfile = () => {
-  const [userData, setUserData] = useState({
-    name: "Edward Vincent",
-    image: Umesh,
-    email: "richardjameswap@gmail.com",
-    phone: "123456789",
-    address: {
-      line1: "57th cross , richmond",
-      line2: "circle charch Road, london",
-    },
-    gender: "Male",
-    dob: "2000-02-10",
-  });
-
-  console.log(userData.image);
+  
+  const {userData, setUserData} = useContext(AppContext)
 
   const [isEdit, setIsEdit] = useState(true);
 
-  return (
+  return userData && (
     <div className="max-w-lg flex flex-col gap-2 text-sm">
       <img src={userData.image} className="w-36 rounded" alt="User Image" />
 
@@ -92,7 +78,7 @@ const MyProfile = () => {
             <p className="text-gray-500">
               {userData.address.line1}
               <br />
-              {userData.address.line1}
+              {userData.address.line2}
             </p>
           )}
         </div>
